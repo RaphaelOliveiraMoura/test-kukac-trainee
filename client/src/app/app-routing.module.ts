@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserFormComponent } from './components/user-form/user-form.component';
-import { UserModalComponent } from './components/user-modal/user-modal.component';
 
 const routes: Routes = [
   {
@@ -13,10 +12,6 @@ const routes: Routes = [
   {
     path: 'kukac',
     component: UserFormComponent
-  },
-  {
-    path: 'kukac/result',
-    component: UserModalComponent
   }
 ];
 
