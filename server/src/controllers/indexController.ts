@@ -6,7 +6,7 @@ class IndexController {
 
     public async index ( request: Request, response: Response ){
 
-        var dataToResponse = {
+        var responseData = {
             nome: '',
             endereco: '',
             per_capita: 0
@@ -28,11 +28,12 @@ class IndexController {
 
         if ( erros.length == 0 ){
 
-            dataToResponse.endereco = adress;
-            dataToResponse.nome = name;
-            dataToResponse.per_capita = renda_mensal / numero_dependentes;
+            responseData.endereco = adress;
+            responseData.nome = name;
+            responseData.per_capita = renda_mensal / numero_dependentes;
+            responseData.per_capita = parseFloat(responseData.per_capita.toFixed(2));
 
-            response.send( dataToResponse );
+            response.send( responseData );
 
         } else {
 

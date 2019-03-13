@@ -15,7 +15,7 @@ const axios_1 = __importDefault(require("axios"));
 class IndexController {
     index(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
-            var dataToResponse = {
+            var responseData = {
                 nome: '',
                 endereco: '',
                 per_capita: 0
@@ -38,10 +38,11 @@ class IndexController {
             else if (numero_dependentes <= 0)
                 erros.push("Numero de dependentes invalido");
             if (erros.length == 0) {
-                dataToResponse.endereco = adress;
-                dataToResponse.nome = name;
-                dataToResponse.per_capita = renda_mensal / numero_dependentes;
-                response.send(dataToResponse);
+                responseData.endereco = adress;
+                responseData.nome = name;
+                responseData.per_capita = renda_mensal / numero_dependentes;
+                responseData.per_capita = parseFloat(responseData.per_capita.toFixed(2));
+                response.send(responseData);
             }
             else {
                 const errosJson = {

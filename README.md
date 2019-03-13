@@ -13,7 +13,8 @@ Processo Seletivo - Estagiario em desenvolvimento Full Stack
 - [x] Postman
 - [x] Git
 
-![alt text](https://uploaddeimagens.com.br/images/001/956/764/full/kukac-index.png?1552445240)
+![alt text](https://i.ibb.co/RCdbF4q/kukac-index.png)
+![alt text](https://i.ibb.co/mDJxCKD/kukac-modal.png)
 
 ## Descrição
 Aplicação basica com um back end que recebe do usuario:

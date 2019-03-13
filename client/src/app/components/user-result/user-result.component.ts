@@ -17,9 +17,7 @@ export class UserResultComponent implements OnInit {
   }
 
   ngOnInit() {
-    // setInterval( () => {
-    //   console.log( this.userImput );
-    // }, 1000);
+    
   }
 
 }
