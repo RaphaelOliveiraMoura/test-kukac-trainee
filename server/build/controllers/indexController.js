@@ -62,7 +62,10 @@ class IndexController {
             });
             if (response == null)
                 return null;
-            return response.data;
+            else if (response.data.erro == true)
+                return null;
+            else
+                return response.data;
         });
     }
 }

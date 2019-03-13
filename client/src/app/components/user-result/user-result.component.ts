@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Response } from '../../models/Response';
 
@@ -9,16 +9,7 @@ import { Response } from '../../models/Response';
 })
 export class UserResultComponent implements OnInit {
 
-  data: Response = {
-    nome: '',
-    endereco: {
-      logradouro: '',
-      bairro: '',
-      localidade: '',
-      uf: ''
-    },
-    per_capta: 0
-  };
+  @Input() data: Response;
 
   constructor() { }
 

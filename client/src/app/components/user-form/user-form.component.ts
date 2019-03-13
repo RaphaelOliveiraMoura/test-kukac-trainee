@@ -30,6 +30,10 @@ export class UserFormComponent implements OnInit {
     per_capita: 0
   };
 
+  responseErros: any = {
+    messages: []
+  }
+
   isLoading: boolean = false;
 
   constructor( private rendaService: RendaUserService, private router: Router ) { 
@@ -45,12 +49,12 @@ export class UserFormComponent implements OnInit {
     this.isLoading = true;
     this.rendaService.sendData( this.requestData ).subscribe(
       response => {
-        console.log(response);
+        this.responseErros = [];
         this.responseData = response;
         this.isLoading = false;
       },
       error => {
-        console.log(error);
+        this.responseErros = error.error;
         this.isLoading = false;
       }
     );

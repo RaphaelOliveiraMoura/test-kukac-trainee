@@ -7,10 +7,11 @@ Processo Seletivo - Estagiario em desenvolvimento Full Stack
 #### @linkedin : https://www.linkedin.com/in/raphael-oliveira-212663179/
 
 ## Ferramentas Utilizadas
-- [x] Angular Cli
-- [x] Node Js
+- [x] Angular Cli v7.2.0
+- [x] Node Js v10.15.2
 - [x] Visual Code
 - [x] Postman
+- [x] Git
 
 ![alt text](https://uploaddeimagens.com.br/images/001/956/764/full/kukac-index.png?1552445240)
 
