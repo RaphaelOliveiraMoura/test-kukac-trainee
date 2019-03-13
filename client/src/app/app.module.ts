@@ -9,12 +9,14 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserResultComponent } from './components/user-result/user-result.component';
 
 import { RendaUserService } from './services/renda-user.service';
+import { UserModalComponent } from './components/user-modal/user-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
-    UserResultComponent
+    UserResultComponent,
+    UserModalComponent
   ],
   imports: [
     BrowserModule,

@@ -10,10 +10,16 @@ import { Response } from '../../models/Response';
 export class UserResultComponent implements OnInit {
 
   @Input() data: Response;
+  @Input() userImput: Request;
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+    // setInterval( () => {
+    //   console.log( this.userImput );
+    // }, 1000);
   }
 
 }

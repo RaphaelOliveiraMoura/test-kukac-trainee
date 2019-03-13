@@ -1,0 +1,58 @@
+<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#user-modal">+ Info</button>
+
+<div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">{{ data == null || data.nome == '' ? 'Usuario' : data.nome }}</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="data">
+        <h5>Renda</h5><br>
+        <div class="row" *ngIf="userImput">
+          <span class="col-sm-4">Renda Mensal</span>
+          <p class="col-sm-8">{{userImput.renda_mensal}} R$</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4">Renda Per Capita</span>
+          <p class="col-sm-8">{{data.per_capita}} R$</p><br>
+        </div>
+        <hr>
+        <h5>Localização</h5><br>
+        <div class="row">
+          <span class="col-sm-4">Cep</span>
+          <p class="col-sm-8">{{data.endereco.cep}}</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4">Estado (UF)</span>
+          <p class="col-sm-8">{{data.endereco.uf}}</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4">Cidade</span>
+          <p class="col-sm-8">{{data.endereco.localidade}}</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4">Bairro</span>
+          <p class="col-sm-8">{{data.endereco.bairro}}</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4">Logradouro</span>
+          <p class="col-sm-8">{{data.endereco.logradouro}}</p><br>
+        </div>
+        <div class="row" *ngIf="data.endereco.complemento">
+          <span class="col-sm-4">Complemento</span>
+          <p class="col-sm-8">{{data.endereco.complemento}}</p><br>
+        </div>
+        <div class="row">
+          <span class="col-sm-4" *ngIf="data.endereco.ibge">Ibge</span>
+          <p class="col-sm-8">{{data.endereco.ibge}}</p><br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

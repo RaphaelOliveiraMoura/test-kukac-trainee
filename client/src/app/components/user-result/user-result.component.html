@@ -1,6 +1,8 @@
-<div class="card border-info mb-3" style="margin-top: 50px;">
+<div class="card border-info mb-3" style="margin-top: 50px;" *ngIf="data">
   <div class="card-header">Olá {{ data.nome == null || data.nome == '' ? 'Usuario' : data.nome }} 
-      <button type="button" class="btn btn-outline-info float-right">+ Info</button>
+      <div class=" float-right">
+        <app-user-modal [data]="data" [userImput]="userImput"></app-user-modal>
+      </div>
   </div>
   <div class="card-body text-info">
     <h5 class="card-title">Localização</h5>

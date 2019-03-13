@@ -19,16 +19,7 @@ export class UserFormComponent implements OnInit {
     numero_dependentes: null
   };
 
-  responseData: Response = {
-    nome: '',
-    endereco: {
-      logradouro: '',
-      bairro: '',
-      localidade: '',
-      uf: ''
-    },
-    per_capita: 0
-  };
+  responseData: Response;
 
   responseErros: any = {
     messages: []
@@ -45,7 +36,6 @@ export class UserFormComponent implements OnInit {
   }
 
   sendData() {
-    console.log( this.requestData );
     this.isLoading = true;
     this.rendaService.sendData( this.requestData ).subscribe(
       response => {

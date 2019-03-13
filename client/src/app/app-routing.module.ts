@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserFormComponent } from './components/user-form/user-form.component';
-import { UserResultComponent } from './components/user-result/user-result.component';
+import { UserModalComponent } from './components/user-modal/user-modal.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/kukac',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'kukac/result',
-    component: UserResultComponent
+    component: UserModalComponent
   }
 ];
 
