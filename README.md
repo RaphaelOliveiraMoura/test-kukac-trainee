@@ -34,7 +34,7 @@ No front end foi utilizado bootstrap com um [tema personalizado](https://bootswa
 #### -Clonando o projeto
 
     Clone o repositorio
-        - git clone
+        - git clone https://github.com/RaphaelOliveiraMoura/kukac-project.git
 
 #### -Baixando as dependencias
 Abra o cmd na pasta origem do projeto clonado
