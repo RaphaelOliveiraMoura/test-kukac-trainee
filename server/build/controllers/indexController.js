@@ -32,7 +32,7 @@ class IndexController {
             if (renda_mensal == null)
                 erros.push("Digite sua renda mensal");
             else if (renda_mensal <= 0)
-                erros.push("Digite uam renda valida");
+                erros.push("Digite uma renda valida");
             if (numero_dependentes == null)
                 erros.push("Digite o numero de dependentes");
             else if (numero_dependentes <= 0)
@@ -44,10 +44,12 @@ class IndexController {
                 response.send(dataToResponse);
             }
             else {
-                const errosString = JSON.stringify(erros);
-                const errosJSON = JSON.parse(errosString);
+                const errosJson = {
+                    "erro": true,
+                    "messages": erros
+                };
                 response.status(400);
-                response.send(errosJSON);
+                response.send(errosJson);
             }
         });
     }
