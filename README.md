@@ -53,7 +53,7 @@ Vamos inicar primeiro a api
 
     -> pelo cmd, va para a pasta server do seu projeto e execute server
         - cd server
-        - node src/build/index.js
+        - node build/index.js
 
 Agora vamos iniciar o angular
 
