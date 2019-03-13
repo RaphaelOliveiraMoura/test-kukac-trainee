@@ -12,6 +12,8 @@ Processo Seletivo - Estagiario em desenvolvimento Full Stack
 - [x] Visual Code
 - [x] Postman
 
+![alt text](https://uploaddeimagens.com.br/images/001/956/764/full/kukac-index.png?1552445240)
+
 ## Descrição
 Aplicação basica com um back end que recebe do usuario:
  - nome ( opcional )
