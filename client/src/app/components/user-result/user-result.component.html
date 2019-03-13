@@ -1,0 +1,16 @@
+<div class="card border-info mb-3">
+  <div class="card-header">Olá {{data.nome == '' ? 'Usuario' : data.nome}} </div>
+  <div class="card-body text-info">
+    <h5 class="card-title">Localização</h5>
+    <p class="card-text">
+      Atualmente voce mora na rua {{data.endereco.logradouro == '' ? '..' : data.endereco.logradouro}}
+      bairro  {{data.endereco.bairro == '' ? '..' : data.endereco.bairro}} 
+      em {{data.endereco.localidade == '' ? '..' : data.endereco.localidade}}
+      {{data.endereco.uf == '' ? '..' : data.endereco.uf}}
+    </p>
+    <h5 class="card-title">Renda</h5>
+    <p class="card-text">
+      Sua renda por pessoa equivale a {{data.per_capta == '' ? '..' : data.endereco.per_capta}}
+    </p>
+  </div>
+</div>
